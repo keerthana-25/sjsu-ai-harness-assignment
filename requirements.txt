@@ -1,0 +1,13 @@
+# SJSU AI Harness Assignment Dependencies
+
+# Part A: Core Harness
+openai>=1.0.0
+
+# Part B: DeepSeek Harness
+# (Will add specific DeepSeek dependencies during Part B implementation)
+
+# Part C: ML Harness Plugins
+# (Will add specific ML dependencies during Part C implementation)
+
+# General utilities
+python-dotenv>=0.19.0
