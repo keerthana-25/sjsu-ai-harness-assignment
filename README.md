@@ -32,17 +32,17 @@ python part_a_openrouter.py
 
 ---
 
-### Part B: DeepSeek Harness + Plugins (PENDING)
+### Part B: DeepSeek Harness + Plugins (IN PROGRESS)
 
 Install and customize DeepSeek harness with 5-7 plugins, including 2 from scratch.
 
-- **Status**: Pending
-- **Location**: `/part-b/`
+- **Status**: Harness installed, Creator Mode confirmed (shipped `cordis` agent preset), 2 custom plugins built and verified end-to-end. Live agent run pending a `DEEPSEEK_API_KEY`.
+- **Location**: `/part-b/` (see its [README](part-b/README.md) for full details)
 - **Requirements**:
-  - Install DeepSeek harness in Creator Mode
-  - Customize with 5-7 plugins
-  - Implement 2 plugins from scratch
-  - Showcase prompt and demo
+  - [x] Install DeepSeek harness in Creator Mode
+  - [x] Implement 2 plugins from scratch (`session-digest`, `repo-doctor` — unit tested + verified mounting in a live `dsh` profile)
+  - [ ] Customize with 5-7 plugins (2 done; 5 more picked from the course list, install commands documented, not yet installed)
+  - [ ] Showcase prompt and demo (prompt written; needs `DEEPSEEK_API_KEY` to run live)
   
 ---
 
@@ -71,8 +71,8 @@ sjsu-ai-harness-assignment/
 │   ├── README.md               # Part A documentation
 │   └── part_a_openrouter.py    # Main harness implementation
 ├── part-b/
-│   ├── README.md               # Part B documentation (pending)
-│   └── harness/                # DeepSeek harness code (pending)
+│   ├── README.md               # Part B documentation
+│   └── plugins/                # session-digest and repo-doctor (built from scratch)
 └── part-c/
     ├── README.md               # Part C documentation (pending)
     └── plugins/                # ML harness plugins (pending)
@@ -105,9 +105,9 @@ python part_a_openrouter.py
 - [x] Part A: Code written and tested
 - [x] Part A: README with architecture explanation
 - [x] Part A: Running instructions
-- [ ] Part B: DeepSeek harness setup
-- [ ] Part B: Plugin implementations
-- [ ] Part B: Demo and documentation
+- [x] Part B: DeepSeek harness setup
+- [x] Part B: Plugin implementations (2 of 2 from-scratch plugins done; 5 pre-built plugins picked, not yet installed)
+- [ ] Part B: Demo and documentation (showcase prompt written; needs `DEEPSEEK_API_KEY` to run live)
 - [ ] Part C: ML harness plugin
 - [ ] Part C: GitHub research and showcase
 - [ ] Overall: Tests and validation

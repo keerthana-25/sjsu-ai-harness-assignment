@@ -53,3 +53,8 @@ htmlcov/
 *.log
 /tmp/
 *.pyc
+
+# Part B: DeepSeek Harness (cloned upstream source + installs, not ours to commit)
+part-b/harness/
+part-b/**/node_modules/
+part-b/.dsh/

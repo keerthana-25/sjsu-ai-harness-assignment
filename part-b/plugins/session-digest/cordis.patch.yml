@@ -1,0 +1,5 @@
+# dsh-plugin-session-digest bundle patch: mounts the plugin after `tools`
+# exists, so it can both observe `tools/result` and register session_digest.
+- insert:
+    - id: session-digest
+      name: dsh-plugin-session-digest

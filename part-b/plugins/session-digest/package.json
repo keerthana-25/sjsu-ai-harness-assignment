@@ -1,0 +1,21 @@
+{
+  "name": "dsh-plugin-session-digest",
+  "version": "0.1.0",
+  "description": "DSH plugin: running changelog of tool calls made during a session, exposed as the session_digest tool.",
+  "type": "module",
+  "main": "index.js",
+  "exports": "./index.js",
+  "license": "MIT",
+  "keywords": ["dsh-plugin", "deepseek-harness"],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "dependencies": {
+    "@deepseek-ai/dsh-tools": "^0.1.5-rc.2"
+  },
+  "scripts": {
+    "test": "node --test"
+  }
+}

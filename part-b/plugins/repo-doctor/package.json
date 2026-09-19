@@ -1,0 +1,21 @@
+{
+  "name": "dsh-plugin-repo-doctor",
+  "version": "0.1.0",
+  "description": "DSH plugin: repo_doctor tool reporting uncommitted changes and TODO/FIXME/XXX markers with a health score.",
+  "type": "module",
+  "main": "index.js",
+  "exports": "./index.js",
+  "license": "MIT",
+  "keywords": ["dsh-plugin", "deepseek-harness"],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "dependencies": {
+    "@deepseek-ai/dsh-tools": "^0.1.5-rc.2"
+  },
+  "scripts": {
+    "test": "node --test"
+  }
+}

@@ -175,8 +175,8 @@ def process_tool_calls(tool_calls):
             print(f"  Result: {result[:200]}...")
             
             results.append({
-                "type": "tool_result",
-                "tool_use_id": tool_call.id,
+                "role": "tool",
+                "tool_call_id": tool_call.id,
                 "content": result,
             })
     

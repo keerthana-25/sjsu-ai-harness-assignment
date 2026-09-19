@@ -1,0 +1,5 @@
+# dsh-plugin-repo-doctor bundle patch: mounts the plugin after `tools`
+# exists so it can register the repo_doctor tool.
+- insert:
+    - id: repo-doctor
+      name: dsh-plugin-repo-doctor
