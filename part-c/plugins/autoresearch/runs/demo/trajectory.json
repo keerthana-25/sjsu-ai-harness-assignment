@@ -1,0 +1,50 @@
+{
+  "task": "tasks/digits_classifier",
+  "model": "nvidia/nemotron-3-super-120b-a12b:free",
+  "iterations": 5,
+  "best_metric": 0.9805555555555555,
+  "history": [
+    {
+      "iteration": 0,
+      "metric": 0.425,
+      "kept": true,
+      "error": "",
+      "note": "baseline"
+    },
+    {
+      "iteration": 1,
+      "metric": 0.9666666666666667,
+      "kept": true,
+      "error": "",
+      "note": "kept: 0.4250 -> 0.9667 (+0.5417)"
+    },
+    {
+      "iteration": 2,
+      "metric": null,
+      "kept": false,
+      "error": "empty response from model 'nvidia/nemotron-3-super-120b-a12b:free': ChatCompletion(id='gen-1789864459-MWopRke8EAYfUP7veir4', choices=None, created=None, model=None, object=None, service_tier=None, system_fingerprint=None, usage=None, error={'message': 'Upstream error from Nvidia: Service temporarily overloaded', 'code': 503, 'metadata': {'error_type': 'provider_overloaded'}})",
+      "note": "reverted: LLM call failed (empty response from model 'nvidia/nemotron-3-super-120b-a12b:free': ChatCompletion(id='gen-1789864459-MWopRke8EAYfUP7veir4', choices=None, created=None, model=None, object=None, service_tier=None, system_fingerprint=None, usage=None, error={'message': 'Upstream error from Nvidia: Service temporarily overloaded', 'code': 503, 'metadata': {'error_type': 'provider_overloaded'}}))"
+    },
+    {
+      "iteration": 3,
+      "metric": 0.9722222222222222,
+      "kept": true,
+      "error": "",
+      "note": "kept: 0.9667 -> 0.9722 (+0.0056)"
+    },
+    {
+      "iteration": 4,
+      "metric": 0.9805555555555555,
+      "kept": true,
+      "error": "",
+      "note": "kept: 0.9722 -> 0.9806 (+0.0083)"
+    },
+    {
+      "iteration": 5,
+      "metric": 0.9805555555555555,
+      "kept": false,
+      "error": "",
+      "note": "reverted: 0.9806 <= best 0.9806"
+    }
+  ]
+}

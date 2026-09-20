@@ -32,31 +32,31 @@ python part_a_openrouter.py
 
 ---
 
-### Part B: DeepSeek Harness + Plugins (IN PROGRESS)
+### Part B: DeepSeek Harness + Plugins (COMPLETE)
 
 Install and customize DeepSeek harness with 5-7 plugins, including 2 from scratch.
 
-- **Status**: Harness installed, Creator Mode confirmed (shipped `cordis` agent preset), 2 custom plugins built and verified end-to-end. Live agent run pending a `DEEPSEEK_API_KEY`.
+- **Status**: Harness installed, Creator Mode confirmed (shipped `cordis` agent preset), 7 plugins total mounted together (2 from scratch, 5 from the community list — all reviewed and verified live by actually booting the web server, not just config validation), showcase prompt run live end-to-end for free via OpenRouter (DeepSeek's own API needs a funded account, which wasn't required — see Part B README for the free-alternative setup).
 - **Location**: `/part-b/` (see its [README](part-b/README.md) for full details)
 - **Requirements**:
   - [x] Install DeepSeek harness in Creator Mode
   - [x] Implement 2 plugins from scratch (`session-digest`, `repo-doctor` — unit tested + verified mounting in a live `dsh` profile)
-  - [ ] Customize with 5-7 plugins (2 done; 5 more picked from the course list, install commands documented, not yet installed)
-  - [ ] Showcase prompt and demo (prompt written; needs `DEEPSEEK_API_KEY` to run live)
+  - [x] Customize with 5-7 plugins (2 from scratch + 5 community plugins, all installed and verified; two had real packaging bugs found and fixed in review — see Part B README)
+  - [x] Showcase prompt and demo (run live, $0 cost, via OpenRouter's free-tier models)
   
 ---
 
-### Part C: Custom ML Harness Plugin (PENDING)
+### Part C: Custom ML Harness Plugin (COMPLETE)
 
 Build a custom ML harness plugin for end-to-end auto-research.
 
-- **Status**: Pending
-- **Location**: `/part-c/`
+- **Status**: Built and run live, end-to-end, for free. Implements the "AutoResearch" pattern (Karpathy's `program.md`, tracked by `WecoAI/awesome-autoresearch`): an LLM proposes an edit to a training script, the harness runs it and keeps or reverts based on the metric. Sample run took a digit classifier from 42.5% to 98.06% accuracy in 5 iterations, fully unattended.
+- **Location**: `/part-c/` (see its [README](part-c/README.md) for full details and results)
 - **Requirements**:
-  - Create custom ML harness plugin
-  - Use favorite coding assistant (open or closed source)
-  - Research existing harnesses on GitHub
-  - Showcase working implementation
+  - [x] Create custom ML harness plugin (`plugins/autoresearch/` — propose → run → measure → keep-or-revert loop)
+  - [x] Use favorite coding assistant (Claude Code, this session)
+  - [x] Research existing harnesses on GitHub (`docs/existing_harnesses.md` — real examples: CUDA kernel tuning, Bitcoin price formulas, RL hyperparameter search, etc.)
+  - [x] Showcase working implementation (`demo.py`, real trajectory logged in `plugins/autoresearch/runs/demo/`)
 
 ---
 
@@ -74,8 +74,8 @@ sjsu-ai-harness-assignment/
 │   ├── README.md               # Part B documentation
 │   └── plugins/                # session-digest and repo-doctor (built from scratch)
 └── part-c/
-    ├── README.md               # Part C documentation (pending)
-    └── plugins/                # ML harness plugins (pending)
+    ├── README.md               # Part C documentation
+    └── plugins/autoresearch/   # the AutoResearch harness (built from scratch)
 ```
 
 ---
@@ -106,10 +106,10 @@ python part_a_openrouter.py
 - [x] Part A: README with architecture explanation
 - [x] Part A: Running instructions
 - [x] Part B: DeepSeek harness setup
-- [x] Part B: Plugin implementations (2 of 2 from-scratch plugins done; 5 pre-built plugins picked, not yet installed)
-- [ ] Part B: Demo and documentation (showcase prompt written; needs `DEEPSEEK_API_KEY` to run live)
-- [ ] Part C: ML harness plugin
-- [ ] Part C: GitHub research and showcase
+- [x] Part B: Plugin implementations (2 of 2 from-scratch plugins + 5 of 5 community plugins, all installed and verified live)
+- [x] Part B: Demo and documentation (showcase prompt run live for free via OpenRouter)
+- [x] Part C: ML harness plugin
+- [x] Part C: GitHub research and showcase
 - [ ] Overall: Tests and validation
 - [ ] Overall: Final README and instructions
 

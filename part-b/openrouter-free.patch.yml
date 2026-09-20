@@ -1,0 +1,25 @@
+# Free alternative to the paid DeepSeek-official route: configures the
+# already-mounted, provider-neutral `dsh-llm-pi-ai` adapter with a
+# hand-declared OpenAI-compatible gateway pointed at OpenRouter, and switches
+# the default model to a genuinely zero-cost (":free") one there.
+#
+# Requires OPENROUTER_API_KEY in the environment (same key used in Part A).
+# Apply with: npx @deepseek-ai/dsh --profile <name> --patch ./openrouter-free.patch.yml ...
+
+- id: llm-pi-ai
+  config:
+    providers:
+      openrouter:
+        displayName: OpenRouter (free)
+        apiKeyEnv: OPENROUTER_API_KEY
+        api: openai-completions
+        baseURL: https://openrouter.ai/api/v1
+        models:
+          - id: nvidia/nemotron-3-super-120b-a12b:free
+            name: Nemotron 3 Super 120B (free, via OpenRouter)
+            contextWindow: 262144
+
+- id: agent-default-model
+  config:
+    provider: openrouter
+    model: nvidia/nemotron-3-super-120b-a12b:free
